@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>流体シュミレーションライブラリ liquidfunの実用例を考えてみた</title>
+
+		<meta name="description" content="全てのクリエイターにオススメの趣味 仮設検証型対大自然な素晴らしい遊び">
+		<meta name="author" content="studio-kakky">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/styles.css">
+		<style>
+		span.small {
+			font-size:0.8em;
+		}
+		.reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+			text-transform:none;
+		}
+		</style>
+		<style>
+			.sequence {
+				overflow: hidden;
+			}
+			.sequence .sequence-item {
+				display: inline-block;
+				margin: 20px;
+			}
+			.sequence .sequence-item__caption {
+				font-size: 0.5em;
+			}
+		</style>
+	</head>
+
+	<body>
+<pre style="display:none"><code></code></pre>
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section data-markdown>
+    			<script type="text/template">
+						## 流体シュミレーションライブラリ liquidfunの実用例を考えてみた
+						by スタジオカッキー
+					</script>
+				</section>
+				<section data-markdown>
+    			<script type="text/template">
+						###自己紹介
+
+						- Webのフロントエンドエンジニア
+						- フリーランス
+						- 昨年11月からなので、1年たちました。
+						- FaceBook：本名で「柿内 暢昌」
+						- http://studio-kakky.com/
+
+					</script>
+				</section>
+
+				<section data-markdown>
+    			<script type="text/template">
+						## 今日の話
+					</script>
+				</section>
+
+				<section data-markdown>
+    			<script type="text/template">
+						### 流体シュミレーション liquidfun
+					</script>
+				</section>
+
+				<section data-markdown>
+    			<script type="text/template">
+						### 流体シュミレーション liquidfun
+
+						- Google製
+						- box2Dを拡張
+						- 2014年3月 発表
+							- C++, Java
+						- 2014年8月 JavaScript版発表
+					</script>
+				</section>
+
+				<section>
+					<section data-markdown>
+	    			<script type="text/template">
+							### 2014年8月 JavaScript版発表 !
+						</script>
+					</section>
+					<section data-markdown>
+	    			<script type="text/template">
+							<iframe src="demo/demo1.html" style="width:110%;height:504px;"></iframe>
+						</script>
+					</section>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						### かなり気持ち良い。
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						### でも、、、、全然流行ってない。。
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						### google 検索の結果数
+						- AngularJS : 12,500,000件
+						- Pixi.js 275,000件
+						- Enchantjs 168,000件
+						- liquidfun: 51,300件
+						- liquidfun　javascript:  6,440件
+
+						すくねぇ。。。
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						### 何故か？
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						### 実装が面倒くさい
+						- ドキュメントが少ない（公式もしょぼい）
+						- box2Dをある程度知らないと辛い。
+						- Viewが別
+						    - 高速化のためにはWebGl必須
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						### まあ、そんなことより、そもそも
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						### 使う意味が無い
+
+						いったい、何に使えばいいんだよ。
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						### そこで！考えてみた。
+
+						なんか実用的なことに使えないか？
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						### 実用例
+						こんなの
+					</script>
+				</section>
+
+				<section>
+					<section data-markdown>
+						<script type="text/template">
+							### スマフォのセンサーと連携
+							<iframe src="demo/demo2.html" style="width:320px;height:480px;background:#000;"></iframe>
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							<iframe width="1120" height="630" src="https://www.youtube.com/embed/24W6dVn3Ljw" frameborder="0" allowfullscreen></iframe>
+						</script>
+					</section>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						### 何に使うの？
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						### 当然こう使います！
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						### 写真
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						### ターゲット
+
+						- 実家が豆腐屋
+						- 手伝わされてる高校生
+						- 主に配達担当
+						- 配達に使う車がAE86
+						- 早く走りたいけど、豆腐の角を潰しちゃいけない
+
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						### 走ってる動画
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						### ドライブ後の写真
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						### 僕はこんなことしか思いつきませんでした。
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						### 楽しいから、皆触って考えてみて！
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						### ご清聴ありがとうございました。
+					</script>
+				</section>
+			</div>
+		</div>
+
+		<script src="js/libs.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'lib/reveal/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'lib/reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'lib/reveal/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'lib/reveal/plugin/zoom-js/zoom.js', async: true },
+					{ src: 'lib/reveal/plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
