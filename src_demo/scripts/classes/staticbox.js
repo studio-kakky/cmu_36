@@ -7,6 +7,10 @@ class StaticBox {
     this.box2DObject.SetTransform(new b2Vec2(x,y), this.box2DObject.GetAngle() );
   }
 
+  setAngle(rad) {
+    this.box2DObject.SetTransform(this.box2DObject.GetPosition(), rad );
+  }
+
   setbox2DObject(world,w,h) {
     var gbd = new b2BodyDef();
     this.box2DObject = world.CreateBody(gbd);
@@ -14,4 +18,6 @@ class StaticBox {
     groundBox.SetAsBoxXY(w, h);
     this.box2DObject.CreateFixtureFromShape(groundBox);
   }
+
+
 }

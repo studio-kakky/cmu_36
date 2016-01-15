@@ -6,7 +6,7 @@ class Demo1 {
   constructor(containerElement) {
     this.sceneObj = [];
     this.counter = 0;
-    this.playFlag = true;
+    this.playFlag = false;
     this.colorHolder = 0xffffff;
     this.init(containerElement);
   }
@@ -14,17 +14,21 @@ class Demo1 {
   init(containerElement) {
     this.setupTHREE(containerElement);
 
-    var gravity = new b2Vec2(0, 500);
+    var gravity = new b2Vec2(0, 300);
     this.world = new b2World(gravity);
-    //this.testRender();
     window.world = this.world;
     this.set2dGround();
 
     this.CustomRender = new Renderer(this.world);
 
-    //this.CustomRender.buffer.position.set(-containerElement.scrollWidth/2, containerElement.scrollHeight/2);
     this.CustomRender.buffer.position.set(10,containerElement.scrollHeight/2,0);
     this.scene.add(this.CustomRender.buffer);
+
+    containerElement.addEventListener('click', ()=>{
+      this.playPause();
+    });
+
+
     this.render();
   }
 
@@ -164,7 +168,7 @@ class Demo1 {
     }
 
     if (this.counter === 30) {
-      new LiquidParticle(this.world, 500, 200, -15.5, -300, 5, 0.01);
+      new LiquidParticle(this.world, 200, 200, -15.5, -300, 3, 0.01);
     }
 
     this.CustomRender.draw();
